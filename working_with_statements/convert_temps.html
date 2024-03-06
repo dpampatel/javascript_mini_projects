@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Convert from Fahrenheit to Centigrade</title>
+    <script>
+      /*-------- Assignment 1: Part 1 and Part 2 Starts --------*/
+      let g_error =
+        "Something went wrong. Please enter the correct value or contact the System Administrator."; // global error message declaration
+      const converter = {};
+      converter.fahrenheitToCentigrade = () => {
+        // method to prompt and alert
+        try {
+          let l_fahrenheitValue; /* local variable declaration*/
+          do {
+            l_fahrenheitValue = prompt(
+              `Enter Fahrenheit temperature\nOr enter 999 to end converter`
+            ); // Prompt to ask user to enter temperature
+            if (
+              isNaN(l_fahrenheitValue) ||
+              isNaN(parseFloat(l_fahrenheitValue))
+            ) {
+              /* two checks since parseFloat converts "6.77abcd" to 6.77*/
+              /* Error handling*/
+              alert(
+                `You entered ${l_fahrenheitValue} \nPlease enter a valid number`
+              );
+              continue;
+            }
+            l_fahrenheitValue = parseFloat(l_fahrenheitValue);
+            if (l_fahrenheitValue >= -100 && l_fahrenheitValue <= 212) {
+              /*Validations ( -100 and 212 allowed, we can remove 
+              '=' from condition if strict between expected, 
+              '=' added since 212F is 100C)*/
+              alert(
+                `Fahrenheit temperature is ${l_fahrenheitValue} \n \nCelsius temperature is ${
+                  ((l_fahrenheitValue - 32) * 5) / 9
+                }` /* \n is not neccessary but added for proper text alignment in alert*/
+                // result rounding not added purposely
+              );
+              /* alert to display result*/
+            } else {
+              if (l_fahrenheitValue == 999) {
+                alert(
+                  "Thanks for using the temperature converter"
+                ); /*Thanks before ending loop*/
+              } else {
+                alert(
+                  `You entered ${l_fahrenheitValue}. \nEntry must range from -100 to +212.`
+                ); /*Validation alert*/
+              }
+            }
+          } while (l_fahrenheitValue != 999); /*do while*/
+        } catch (e) {
+          /* just incase if anthing goes wrong.*/
+          alert(g_error);
+          console.log(e);
+        }
+      };
+      //converter.fahrenheitToCentigrade(); /* called from DOMContentLoaded*/
+      /*-------- Assignment 1: Part 1 and Part 2 Ends --------*/
+      /* please refer main.js for additional code*/
+    </script>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+  </head>
+  <body style="text-align: center">
+    <main>
+      <!-- Referred to split screen example of w3 schools -->
+      <!-- https://www.w3schools.com/howto/howto_css_split_screen.asp -->
+      <!-- no other websites were referred -->
+      <div class="split left">
+        <div class="centered">
+          <input type="number" id="id_fahrenheit" step="any" />
+          <p>Fahrenheit</p>
+        </div>
+      </div>
+      <div class="split right">
+        <div class="centered">
+          <input type="number" id="id_celsius" step="any" />
+          <p>Celsius</p>
+        </div>
+      </div>
+      <!--<button id="id_btn_part_2">Assignment 1 Part 2</button>-->
+      <h1 id="id_thanks" hidden>Thanks for using the temperature converter</h1>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+body {
+  background-size: cover;
+  background-image: url("./imgs/clock.jpg");
+  color: #6c644f;
+}
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 20% auto;
+  width: 400px;
+  border: 1px solid #eee;
+  padding: 0 2em 1em;
+  box-shadow: 5px 5px 5px #989898;
+  border-radius: 5px;
+  text-align: center;
+}
+div {
+  margin-bottom: 1em;
+}
+label {
+  display: inline-block;
+  width: 11em;
+  text-align: right;
+}
+legend {
+  font-size: 16px;
+}
+fieldset {
+  margin-bottom: 0.5em;
+  font-size: 1.8em;
+  font-weight: bolder;
+}
+#seconds {
+  margin-right: 0.5em;
+}

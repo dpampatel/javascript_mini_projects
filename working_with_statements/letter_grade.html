@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Show letter grade</title>
+    <script>
+      /*-------- Assignment 1: Part 3 --------*/
+      let g_error =
+        "Something went wrong. Please enter the correct value or contact the System Administrator."; // global error message declaration
+      const converter = {};
+      converter.numberToLetterGrade = () => {
+        /*method to convert number to letter grade*/
+        try {
+          let l_numberGrade; /* local variable declaration*/
+          do {
+            let l_grade = "A"; /*declare and set default value*/
+            l_numberGrade = prompt(
+              "Enter number grade from 0 through 100\nOr enter 999 to end entries"
+            ); /*prompt requesting user to enter value*/
+            if (isNaN(l_numberGrade) || isNaN(parseFloat(l_numberGrade))) {
+              continue; /*invalid number handling*/
+            }
+            l_numberGrade = parseFloat(l_numberGrade);
+            if (l_numberGrade >= 0 && l_numberGrade <= 100) {
+              /* validation */
+              /*A: 88-100
+            	B: 80-87
+            	C: 68-79
+            	D: 60-67
+            	F: <60*/
+              /* using if.. else.. because of this statement - "This assignment will give you some practice using if statements."*/
+              /* avoiding multiple conditions using && in following ifs*/
+              if (l_numberGrade < 60) {
+                l_grade = "F";
+              } else if (l_numberGrade < 68) {
+                l_grade = "D";
+              } else if (l_numberGrade < 80) {
+                l_grade = "C";
+              } else if (l_numberGrade < 88) {
+                l_grade = "B";
+              } /* Default is "A"; <=100 validation already included */
+              alert(
+                `Number grade = ${l_numberGrade}\nLetter grade = ${l_grade}`
+              );
+            }
+            /*If the entry is invalid, the application should just display the
+			starting prompt dialog box. It doesn’t need to display a special error message.*/
+          } while (l_numberGrade != 999); /*endling loop*/
+        } catch (e) {
+          /*incase anthing goes wrong*/
+          console.log(e);
+          alert(g_error);
+        }
+      };
+      converter.numberToLetterGrade();
+      /*-------- Assignment 1: Part 3 --------*/
+    </script>
+    <style>
+      body {
+        background-image: linear-gradient(to left, red, yellow);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Thanks for using number to letter grade converter</h1>
+    </main>
+  </body>
+</html>

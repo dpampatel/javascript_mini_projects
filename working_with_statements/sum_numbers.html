@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sum of Numbers</title>
+    <script>
+      /*-------- Assignment 1: Part 4 --------*/
+      let g_error =
+          "Something went wrong. Please enter the correct value or contact the System Administrator.",
+        g_invalid = "Please enter a number between 1 and 100"; // global message declarations
+      try {
+        let l_invalid; /* Flag declaration*/
+        do {
+          let l_sum = 0; /* initial value of result */
+          l_invalid = false;
+          let l_top_number = prompt(
+            "Enter any top number to sum \nfrom 1 through 100"
+          ); /*requesting user to enter number*/
+          if (isNaN(l_top_number) || isNaN(parseFloat(l_top_number))) {
+            /*error handling*/
+            alert(g_invalid); /* validation alert*/
+            l_invalid = true; /* I am using flag to skip "Do another sum?" prompt*/
+            continue; /* no further processing if invalid*/
+          }
+          l_top_number =
+            parseFloat(l_top_number); /* parsing string value to float */
+          if (l_top_number >= 1 && l_top_number <= 100) {
+            /* validation number range*/
+            for (let i = 1; i <= l_top_number; i++) {
+              l_sum += i;
+            } /* Sum logic using loop to calculate*/
+            /* I want to use n(n+1)/2 and avoid loop :D, however, 100 is not huge*/
+            alert(
+              `The sum of the numbers from 1 through ${l_top_number} is ${l_sum}`
+            ); /* Result alert*/
+          } else {
+            alert(g_invalid); /*validation alert*/
+            l_invalid = true;
+          }
+        } while (
+          l_invalid ||
+          prompt("Do another sum? \nEnter 'y' to continue") == "y"
+        );
+      } catch (e) {
+        console.log(e);
+        alert(g_error);
+      }
+      /*-------- Assignment 1: Part 4 --------*/
+    </script>
+    <style>
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+      body {
+        text-align: center;
+        background-image: linear-gradient(-45deg, red, blue, yellow, indigo);
+        background-size: 400% 400%;
+
+        animation: animate 10s ease infinite;
+      }
+      @keyframes animate {
+        0% {
+          background-position: 0 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Will show after JavaScript has run -->
+      <h1>Thanks for using the Sum of Numbers application!</h1>
+    </main>
+  </body>
+</html>

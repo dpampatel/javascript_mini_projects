@@ -1,0 +1,48 @@
+* {
+  font-family: "Noto Sans";
+  /* Using Google fonts */
+}
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 87.5%;
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px 25px;
+}
+h1 {
+  margin: 1em;
+  text-align: center;
+}
+h2 {
+  font-size: 120%;
+  margin: 0 0 1em 0;
+}
+div.hide {
+  display: none;
+}
+a {
+  color: #106ebe;
+}
+a:hover {
+  color: orange;
+}
+
+#jdom.lightmode {
+  color: #212121;
+}
+
+main .card {
+  box-shadow: 5px 5px 10px #5a5a5a;
+  margin: 1em 0;
+  padding: 1em 2em;
+  border-radius: 5px;
+}
+
+a {
+  padding-top: 1em;
+  text-align: center;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+}
