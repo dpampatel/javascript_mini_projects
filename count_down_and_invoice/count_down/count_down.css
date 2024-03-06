@@ -1,0 +1,50 @@
+body {
+  background-size: cover;
+  background-image: url("./imgs/clock.jpg");
+  color: #6c644f;
+}
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 20% auto;
+  width: 400px;
+  border: 1px solid #eee;
+  padding: 0 2em 1em;
+  box-shadow: 5px 5px 5px #989898;
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  color: #6c644f;
+}
+div {
+  margin-bottom: 1em;
+}
+label {
+  display: inline-block;
+  width: 6em;
+  text-align: left;
+}
+input {
+  margin-left: 1em;
+}
+#message {
+  font-weight: bold;
+  color: red;
+  text-align: left;
+  width: auto;
+}
+#countdown {
+  width: 100px;
+  height: 30px;
+  color: white;
+  background: #6c644f;
+  border: none;
+  border-radius: 15px;
+  font-weight: bolder;
+}
+
+#countdown:hover {
+  box-shadow: 0 0 2px #000;
+}

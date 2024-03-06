@@ -1,0 +1,103 @@
+main {
+  color: #1a1a1a;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #4942e4;
+  margin: 3% auto;
+  width: 1000px;
+  padding: 0 2em 1em;
+}
+.cls-main {
+  display: grid;
+  grid-template-columns: 600px auto;
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+.cls-response {
+  text-align: center;
+  margin: auto;
+  height: 1vh;
+  color: #fff;
+  font-size: larger;
+}
+form {
+  padding: 10px;
+  background-color: #fff;
+}
+span {
+  color: #da0000;
+  font-size: 0.85em;
+}
+.cls-image {
+  height: 530px;
+  background-image: url(images/car.jpg);
+  background-size: cover;
+  margin: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+header,
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+div {
+  margin-bottom: 0.5em;
+}
+fieldset {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  border: 0.1px solid #1a1a1a;
+}
+legend {
+  color: #0b57d0;
+  font-weight: bold;
+  margin: 0.5em;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 120%;
+}
+label {
+  display: inline-block;
+  width: 6em;
+}
+input,
+select {
+  margin-left: 1em;
+  margin-right: 0.5em;
+}
+input {
+  width: 14em;
+}
+input.left {
+  width: 1em;
+  padding-left: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+/*input.last {
+	margin-bottom: 1em;
+}*/
+#convertible {
+  width: 1em;
+  margin-left: 0;
+}
+#submit {
+  margin-left: 0;
+  width: 10em;
+  color: #0b57d0;
+  font-weight: bold;
+  height: 3em;
+}
+
+.cls-submit {
+  text-align: center;
+}

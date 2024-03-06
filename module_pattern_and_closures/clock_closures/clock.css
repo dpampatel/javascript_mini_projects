@@ -1,0 +1,52 @@
+body {
+  background-size: cover;
+  background-image: url("./imgs/clock.jpg");
+  color: #6c644f;
+}
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 14% auto;
+  width: 400px;
+  border: 1px solid #eee;
+  padding: 0 2em 1em;
+  box-shadow: 5px 5px 5px #989898;
+  border-radius: 5px;
+  text-align: center;
+}
+div {
+  margin-bottom: 1em;
+}
+label {
+  display: inline-block;
+  width: 11em;
+  text-align: right;
+}
+legend {
+  font-size: 16px;
+}
+input {
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+fieldset {
+  margin-bottom: 0.5em;
+  font-size: 1.8em;
+  font-weight: bolder;
+}
+fieldset input,
+#seconds {
+  margin-right: 0.5em;
+}
+fieldset input {
+  font-size: 16px;
+  background-color: #6c644f;
+  color: white;
+  font-weight: 200;
+  border: none;
+  padding: 0.25em 1em;
+  box-shadow: 1px 1px 5px #000;
+}
+fieldset input:active {
+  background-color: #4a4536;
+}

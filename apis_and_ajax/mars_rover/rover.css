@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 90vw;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: gray;
+}
+main {
+  width: 700px;
+  padding: 0 2em 1em;
+  box-shadow: 0 0 5px #000;
+  border-radius: 5px;
+  background-color: #fff;
+}
+h1,
+h3 {
+  text-align: center;
+  color: #202a5b;
+}
+div {
+  margin-bottom: 1em;
+}
+label {
+  display: inline-block;
+  width: 8em;
+}
+input {
+  margin-right: 0.5em;
+}
+table {
+  margin-bottom: 1em;
+}
+td,
+th {
+  min-width: 7em;
+  text-align: left;
+}
+img {
+  width: 200px;
+  margin: auto;
+}
+.error {
+  color: red;
+}
+.hide {
+  display: none;
+}
+.cls-video {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  outline: none;
+}
+.cls-div select {
+  width: 50%;
+}
+small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+#view {
+  font-size: 16px;
+  background-color: #202a5b;
+  color: white;
+  font-weight: 200;
+  border: none;
+  padding: 0.25em 1em;
+  box-shadow: 1px 1px 5px #000;
+}
+#view:active {
+  background-color: #4159af;
+}
+.cls-view {
+  text-align: center;
+}
+#display {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+}
